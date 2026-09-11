@@ -1,0 +1,242 @@
+{
+  "Thể Loại": [
+    {
+      "name": "Hành Động",
+      "href": "/the-loai/hanh-dong"
+    },
+    {
+      "name": "Tình Cảm",
+      "href": "/the-loai/tinh-cam"
+    },
+    {
+      "name": "Hài Hước",
+      "href": "/the-loai/hai-huoc"
+    },
+    {
+      "name": "Cổ Trang",
+      "href": "/the-loai/co-trang"
+    },
+    {
+      "name": "Tâm Lý",
+      "href": "/the-loai/tam-ly"
+    },
+    {
+      "name": "Hình Sự",
+      "href": "/the-loai/hinh-su"
+    },
+    {
+      "name": "Chiến Tranh",
+      "href": "/the-loai/chien-tranh"
+    },
+    {
+      "name": "Thể Thao",
+      "href": "/the-loai/the-thao"
+    },
+    {
+      "name": "Võ Thuật",
+      "href": "/the-loai/vo-thuat"
+    },
+    {
+      "name": "Viễn Tưởng",
+      "href": "/the-loai/vien-tuong"
+    },
+    {
+      "name": "Phiêu Lưu",
+      "href": "/the-loai/phieu-luu"
+    },
+    {
+      "name": "Khoa Học",
+      "href": "/the-loai/khoa-hoc"
+    },
+    {
+      "name": "Kinh Dị",
+      "href": "/the-loai/kinh-di"
+    },
+    {
+      "name": "Âm Nhạc",
+      "href": "/the-loai/am-nhac"
+    },
+    {
+      "name": "Thần Thoại",
+      "href": "/the-loai/than-thoai"
+    },
+    {
+      "name": "Tài Liệu",
+      "href": "/the-loai/tai-lieu"
+    },
+    {
+      "name": "Gia Đình",
+      "href": "/the-loai/gia-dinh"
+    },
+    {
+      "name": "Chính kịch",
+      "href": "/the-loai/chinh-kich"
+    },
+    {
+      "name": "Bí ẩn",
+      "href": "/the-loai/bi-an"
+    },
+    {
+      "name": "Học Đường",
+      "href": "/the-loai/hoc-duong"
+    },
+    {
+      "name": "Kinh Điển",
+      "href": "/the-loai/kinh-dien"
+    },
+    {
+      "name": "Phim 18+",
+      "href": "/the-loai/phim-18"
+    },
+    {
+      "name": "Anime & Hoạt Hình",
+      "href": "/the-loai/hoat-hinh"
+    },
+    {
+      "name": "TV Shows",
+      "href": "/the-loai/tv-shows"
+    }
+  ],
+  "Quốc Gia": [
+    {
+      "name": "Trung Quốc",
+      "href": "/quoc-gia/trung-quoc"
+    },
+    {
+      "name": "Hàn Quốc",
+      "href": "/quoc-gia/han-quoc"
+    },
+    {
+      "name": "Nhật Bản",
+      "href": "/quoc-gia/nhat-ban"
+    },
+    {
+      "name": "Thái Lan",
+      "href": "/quoc-gia/thai-lan"
+    },
+    {
+      "name": "Âu Mỹ",
+      "href": "/quoc-gia/au-my"
+    },
+    {
+      "name": "Đài Loan",
+      "href": "/quoc-gia/dai-loan"
+    },
+    {
+      "name": "Hồng Kông",
+      "href": "/quoc-gia/hong-kong"
+    },
+    {
+      "name": "Ấn Độ",
+      "href": "/quoc-gia/an-do"
+    },
+    {
+      "name": "Anh",
+      "href": "/quoc-gia/anh"
+    },
+    {
+      "name": "Pháp",
+      "href": "/quoc-gia/phap"
+    },
+    {
+      "name": "Canada",
+      "href": "/quoc-gia/canada"
+    },
+    {
+      "name": "Nga",
+      "href": "/quoc-gia/nga"
+    }
+  ],
+  "Năm Phát Hành": [
+    {
+      "name": "Năm 2026",
+      "href": "/nam-phat-hanh/2026"
+    },
+    {
+      "name": "Năm 2025",
+      "href": "/nam-phat-hanh/2025"
+    },
+    {
+      "name": "Năm 2024",
+      "href": "/nam-phat-hanh/2024"
+    },
+    {
+      "name": "Năm 2023",
+      "href": "/nam-phat-hanh/2023"
+    },
+    {
+      "name": "Năm 2022",
+      "href": "/nam-phat-hanh/2022"
+    },
+    {
+      "name": "Năm 2021",
+      "href": "/nam-phat-hanh/2021"
+    },
+    {
+      "name": "Năm 2020",
+      "href": "/nam-phat-hanh/2020"
+    },
+    {
+      "name": "Năm 2019",
+      "href": "/nam-phat-hanh/2019"
+    },
+    {
+      "name": "Năm 2018",
+      "href": "/nam-phat-hanh/2018"
+    },
+    {
+      "name": "Năm 2017",
+      "href": "/nam-phat-hanh/2017"
+    },
+    {
+      "name": "Năm 2016",
+      "href": "/nam-phat-hanh/2016"
+    },
+    {
+      "name": "Năm 2015",
+      "href": "/nam-phat-hanh/2015"
+    },
+    {
+      "name": "Trước Năm 2015",
+      "href": "/nam-phat-hanh/truoc-nam-2015"
+    }
+  ],
+  "Chủ Đề Phim": [
+    {
+      "name": "Phim Chiếu Rạp",
+      "href": "/danh-sach/phim-chieu-rap"
+    },
+    {
+      "name": "Phim Thuyết Minh",
+      "href": "/danh-sach/phim-thuyet-minh"
+    },
+    {
+      "name": "Phim Lồng Tiếng",
+      "href": "/danh-sach/phim-long-tieng"
+    },
+    {
+      "name": "Phim Trailer",
+      "href": "/danh-sach/phim-trailer"
+    },
+    {
+      "name": "Phim Hot Trong Tuần",
+      "href": "/danh-sach/phim-hot-tuan"
+    },
+    {
+      "name": "Phim Hot Trong Tháng",
+      "href": "/danh-sach/phim-hot-thang"
+    },
+    {
+      "name": "Top Bình Luận",
+      "href": "/danh-sach/top-binh-luan"
+    },
+    {
+      "name": "Phim Bộ Hoàn Thành",
+      "href": "/danh-sach/phim-bo-hoan-thanh"
+    },
+    {
+      "name": "Short Drama",
+      "href": "/the-loai/short-drama"
+    }
+  ]
+}

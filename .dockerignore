@@ -1,0 +1,14 @@
+﻿node_modules
+build
+.git
+.github
+.env
+.env.local
+.env.production
+npm-debug.log
+yarn-error.log
+
+server/data.json
+server/data.json.tmp
+reference*.html
+catalog-extracted.json
