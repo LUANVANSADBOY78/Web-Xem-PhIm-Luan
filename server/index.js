@@ -151,5 +151,9 @@ app.use('/api', (req, res) => res.status(404).json({ error: 'Không tìm thấy 
 app.use(express.static(path.join(__dirname, '../build')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../build/index.html')));
 app.use((error, req, res, next) => { console.error(error.message); res.status(400).json({ error: 'Không thể xử lý dữ liệu. Vui lòng thử lại.' }); });
-if (require.main === module) app.listen(process.env.PORT || 3000, process.env.HOST || '127.0.0.1', () => console.log(`Motchill: http://localhost:${process.env.PORT || 3000}`));
+if (require.main === module) {
+  const port = Number(process.env.PORT) || 3000;
+  const host = process.env.HOST || '0.0.0.0';
+  app.listen(port, host, () => console.log(`Motchill: http://${host}:${port}`));
+}
 module.exports = app;
