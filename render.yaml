@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: motchill-movie-watching
+    name: van-luan-movie-watching
     runtime: node
     plan: starter
     buildCommand: npm ci --legacy-peer-deps && npm run build
