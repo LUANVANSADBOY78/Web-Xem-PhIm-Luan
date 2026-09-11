@@ -10,6 +10,7 @@ WORKDIR /app
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/server ./server
+COPY --from=builder /app/src ./src
 RUN mkdir -p /data && chown node:node /data
 ENV HOST=0.0.0.0 PORT=3000 DATA_FILE=/data/data.json
 VOLUME /data
