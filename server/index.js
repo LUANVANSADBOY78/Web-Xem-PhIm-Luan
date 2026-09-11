@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const app = express();
+if (process.env.RENDER) app.set('trust proxy', 1);
 const file = process.env.DATA_FILE || path.join(__dirname, 'data.json');
 const seed = require('./catalog.json');
 let db = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {
@@ -31,10 +32,11 @@ const features = require('./features')(app, db, save, auth, admin);
 function signIn(res, user) {
   const token = crypto.randomBytes(32).toString('hex');
   sessions.set(token, { id: user.id, expires: Date.now() + 86400000 });
-  res.cookie('session', token, { httpOnly: true, sameSite: 'strict', maxAge: 86400000 });
+  res.cookie('session', token, { httpOnly: true, secure: !!process.env.RENDER, sameSite: 'strict', maxAge: 86400000 });
   res.json(publicUser(user));
 }
-app.get('/api/session', (req, res) => res.json({ user: req.user ? publicUser(req.user) : null, needsSetup: !db.users.some(u => u.role === 'admin') }));
+app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/api/session', (req, res) => res.json({ user: req.user ? publicUser(req.user) : null, needsSetup: !db.users.some(u => u.role === 'admin'), setupRequiresToken: !!(process.env.ADMIN_SETUP_TOKEN || process.env.RENDER) }));
 app.post('/api/auth/:action', (req, res) => {
   const { action } = req.params;
   if (action === 'logout') { sessions.delete(req.token); res.clearCookie('session'); return res.json({ ok: true }); }
@@ -51,6 +53,11 @@ app.post('/api/auth/:action', (req, res) => {
     return signIn(res, existing);
   }
   if (!['register', 'setup'].includes(action)) return res.sendStatus(404);
+  if (action === 'setup' && (process.env.RENDER || process.env.ADMIN_SETUP_TOKEN)) {
+    const supplied = Buffer.from(String(req.body.setupToken || ''));
+    const expected = Buffer.from(process.env.ADMIN_SETUP_TOKEN || '');
+    if (!expected.length || supplied.length !== expected.length || !crypto.timingSafeEqual(supplied, expected)) return res.status(403).json({ error: 'Mã thiết lập Admin không đúng. Lấy mã ADMIN_SETUP_TOKEN trong Environment của dịch vụ Render.' });
+  }
   if (action === 'setup' && db.users.some(u => u.role === 'admin')) return res.status(403).json({ error: 'Quản trị viên đã được thiết lập.' });
   if (existing) return res.status(409).json({ error: 'Email đã được sử dụng.' });
   const salt = crypto.randomBytes(16).toString('hex');

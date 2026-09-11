@@ -15,7 +15,12 @@ test('Notifications, independent taxonomies, moderation and statistics', async t
     const r = await fetch(base + url, { method, headers: { 'Content-Type': 'application/json', ...(cookie ? { cookie } : {}) }, body: body ? JSON.stringify(body) : undefined });
     return { status: r.status, data: await r.json(), cookie: r.headers.get('set-cookie')?.split(';')[0] };
   }
-  const admin = await req('/auth/setup', 'POST', { email: 'admin@example.test', password: 'test-password-123' });
+  process.env.ADMIN_SETUP_TOKEN = 'test-only-render-setup-code';
+  assert.equal((await req('/health')).status, 200);
+  assert.equal((await req('/session')).data.setupRequiresToken, true);
+  assert.equal((await req('/auth/setup', 'POST', { email: 'admin@example.test', password: 'test-password-123' })).status, 403);
+  const admin = await req('/auth/setup', 'POST', { email: 'admin@example.test', password: 'test-password-123', setupToken: process.env.ADMIN_SETUP_TOKEN });
+  delete process.env.ADMIN_SETUP_TOKEN;
   const user = await req('/auth/register', 'POST', { email: 'viewer@example.test', password: 'test-password-123' });
   const movie = { name: 'Feature test', slug: 'feature-test', categories: [], regions: [], episodes: [], type: 'series', status: 'ongoing' };
   const created = await req('/admin/movies', 'POST', movie, admin.cookie);

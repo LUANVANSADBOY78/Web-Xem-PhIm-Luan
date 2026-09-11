@@ -49,8 +49,16 @@ npm run build
 
 Kiểm thử bao gồm phân quyền, thiết lập Admin một lần, CRUD phim, ẩn/khôi phục, bình luận, đánh giá, lịch sử, khóa tài khoản, tìm kiếm và màn hình lỗi API.
 
-## Triển khai
+## Triển khai Render
 
-Dockerfile và Render cấu hình máy chủ Node cùng ổ lưu dữ liệu. Chưa triển khai lên dịch vụ bên ngoài. Render cấu hình ổ lưu bền vững cần gói hỗ trợ disk. GitHub Pages chỉ phục vụ file tĩnh, không chạy được API này.
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/LUANVANSADBOY78/Web-Xem-PhIm-Luan)
+
+Dùng liên kết trên để Render đọc `render.yaml` và tạo **Web Service Node**. Trang Static Site không chạy được API đăng nhập và quản trị.
+
+Cấu hình: nhánh `main`, Root Directory để trống, Build Command `npm ci --legacy-peer-deps && npm run build`, Start Command `npm start`, Node 22.19.0, HOST `0.0.0.0`. Health check ở `/api/health`.
+
+Blueprint hiện dùng gói **Free**, không tạo tài nguyên trả phí. File `/tmp/van-luan-data.json` là lưu trữ tạm: tài khoản và chỉnh sửa mất sau khi Render khởi động lại hoặc triển khai lại. Muốn giữ dữ liệu cần ổ persistent disk trên gói hỗ trợ disk hoặc cơ sở dữ liệu ngoài. Docker vẫn hỗ trợ gắn volume `/data`.
+
+Lần đầu tạo Admin trên Render: mở service → Environment, lấy giá trị `ADMIN_SETUP_TOKEN` do Render sinh; vào website `/dang-nhap` → Thiết lập Admin, nhập mã đó cùng tài khoản mới. Không gửi mã lên GitHub. Mã này ngăn người lạ giành quyền Admin đầu tiên khi website vừa được công khai. Nếu tạo service thủ công, cần tự đặt biến `ADMIN_SETUP_TOKEN` trước khi thiết lập Admin.
 
 Xem bảng đối chiếu yêu cầu và đường dẫn chức năng trong [FEATURES.md](FEATURES.md). Thao tác Xóa phim/tài khoản/bình luận sử dụng xóa mềm để có thể khôi phục.

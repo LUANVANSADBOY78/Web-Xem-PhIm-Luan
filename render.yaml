@@ -2,15 +2,17 @@ services:
   - type: web
     name: van-luan-movie-watching
     runtime: node
-    plan: starter
+    plan: free
+    branch: main
+    healthCheckPath: /api/health
     buildCommand: npm ci --legacy-peer-deps && npm run build
     startCommand: npm start
     envVars:
+      - key: NODE_VERSION
+        value: 22.19.0
       - key: HOST
         value: 0.0.0.0
       - key: DATA_FILE
-        value: /var/data/data.json
-    disk:
-      name: motchill-data
-      mountPath: /var/data
-      sizeGB: 1
+        value: /tmp/van-luan-data.json
+      - key: ADMIN_SETUP_TOKEN
+        generateValue: true
