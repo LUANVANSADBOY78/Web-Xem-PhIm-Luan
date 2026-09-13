@@ -27,7 +27,8 @@ test('Direct detail route has a useful state without episodes', async () => {
 });
 test('Anonymous visitors cannot access Admin', async () => {
   render(<MemoryRouter initialEntries={['/admin']}><App /></MemoryRouter>);
-  expect(await screen.findByText('Bạn cần đăng nhập bằng tài khoản quản trị viên.')).toBeInTheDocument();
+  expect(await screen.findByRole('heading', { name: 'Đăng nhập quản trị' })).toBeInTheDocument();
+  expect(screen.queryByRole('button', { name: 'Tìm kiếm', exact: true })).not.toBeInTheDocument();
 });
 test('API failures show a retry screen instead of a blank page', async () => {
   api.mockRejectedValue(new Error('Mất kết nối'));

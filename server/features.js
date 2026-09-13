@@ -78,7 +78,25 @@ module.exports = function features(app, db, save, auth, admin) {
       const date = d.toISOString().slice(0, 10);
       return { date, views: db.dailyViews[date] || 0 };
     });
-    res.json({ days });
+    const today = new Date().toISOString().slice(0, 10);
+    const month = today.slice(0, 7);
+    const months = Array.from({ length: 12 }, (_, i) => {
+      const date = new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth() - 11 + i, 1)).toISOString().slice(0, 7);
+      return { date, views: Object.entries(db.dailyViews).filter(([d]) => d.startsWith(date)).reduce((s, [, v]) => s + Number(v), 0) };
+    });
+    const movies = db.movies.filter(m => !m.deleted);
+    const ratings = m => db.ratings.filter(r => r.slug === m.slug && !r.hidden);
+    res.json({ days, months, timezone: 'UTC', totals: {
+      movies: movies.length, episodes: movies.reduce((s, m) => s + new Set(m.episodes.map(e => e.name.trim().toLowerCase().replace(/^tập\s*/, '').replace(/^0+(?=\d)/, ''))).size, 0),
+      users: db.users.filter(u => !u.deleted).length, comments: db.comments.filter(c => !c.deleted).length,
+      views: movies.reduce((s, m) => s + Number(m.view_total || 0), 0),
+      today: db.dailyViews[today] || 0, week: days.slice(-7).reduce((s, d) => s + d.views, 0), month: months.at(-1).views,
+      newUsers: db.users.filter(u => !u.deleted && u.created_at?.startsWith(month)).length,
+      newComments: db.comments.filter(c => !c.deleted && c.date?.startsWith(month)).length
+    }, newest: movies.filter(m => m.created_at).sort((a,b) => b.created_at.localeCompare(a.created_at)).slice(0,8).map(m => ({ id:m.id, name:m.name, slug:m.slug, created_at:m.created_at })),
+    top: [...movies].sort((a,b) => Number(b.view_total || 0)-Number(a.view_total || 0)).slice(0,10).map(m => ({ id:m.id, name:m.name, slug:m.slug, views:Number(m.view_total || 0) })),
+    rated: movies.map(m => { const r = ratings(m); return { id:m.id, name:m.name, slug:m.slug, count:r.length, score:r.length ? r.reduce((s,r)=>s+r.score,0)/r.length : 0 }; }).filter(m=>m.count).sort((a,b)=>b.score-a.score).slice(0,10)
+    });
   });
   return { catalogueMovie, onMovieSaved, visible };
 };

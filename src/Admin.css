@@ -1,0 +1,24 @@
+.admin-shell{display:flex;min-height:100vh;background:#0c121c;color:#e8edf5;font-size:14px}
+.admin-sidebar{width:240px;flex-shrink:0;padding:28px 18px;background:#101a28;border-right:1px solid #253044;display:flex;flex-direction:column;height:100vh;position:sticky;top:0}
+.admin-sidebar-scroll{flex:1;overflow-y:auto;padding-right:4px;}
+.admin-sidebar-scroll::-webkit-scrollbar{width:4px}
+.admin-sidebar-scroll::-webkit-scrollbar-thumb{background:#253044;border-radius:4px}
+.admin-nav-group{margin-bottom:20px}
+.admin-nav-group p.muted{font-size:11px;font-weight:700;letter-spacing:1px;padding:0 12px;margin:0 0 8px 0;color:#5a6d8d}
+.admin-brand{font-weight:800;letter-spacing:1px;display:flex;align-items:center;gap:10px;font-size:17px;padding:4px 6px 28px}
+.admin-brand span{background:#f98a27;color:#101722;padding:8px;border-radius:9px}
+.admin-sidebar nav{display:flex;flex-direction:column;gap:3px}
+.admin-sidebar nav a{padding:10px 14px;border-radius:8px;display:flex;gap:12px;color:#a9b6ca;font-weight:500;transition:all 0.2s}
+.admin-sidebar nav a.active{background:#ff8b241c;color:#ff9c49;border-left:3px solid #ff8b24}
+.admin-sidebar nav a:hover{background:#233044;color:#fff}
+.admin-back{display:block;margin:20px 12px 0;color:#99aecb}
+.admin-workspace{min-width:0;flex:1;display:flex;flex-direction:column}
+.admin-topbar{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;border-bottom:1px solid #263246;background:#101925;gap:16px}
+.admin-topbar small{color:#8f9db1}
+.admin-topbar h1{font-size:24px;margin:5px 0 0}
+.admin-account{display:flex;gap:24px;align-items:center}
+.admin-account details{position:relative}
+.admin-account summary{cursor:pointer;font-weight:600}
+.admin-account details button{position:absolute;right:0;top:28px;z-index:2;min-width:130px}
+.admin-body{padding:28px 32px;max-width:1800px;margin:0 auto;width:100%}
+@media(max-width:700px){.admin-shell{display:block}.admin-sidebar{width:100%;height:auto;position:static;padding:16px}.admin-brand{padding-bottom:12px}.admin-sidebar>p,.admin-back{display:none}.admin-sidebar nav{display:flex;flex-direction:row;overflow-x:auto;gap:6px}.admin-sidebar nav a{white-space:nowrap;padding:9px}.admin-topbar{padding:18px 16px;align-items:flex-start}.admin-topbar h1{font-size:20px}.admin-account{font-size:12px;gap:10px}.admin-body{padding:16px}.admin-shell .panel{padding:16px}.admin-shell .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.admin-shell .stats strong{font-size:24px}.admin-shell .form-grid,.admin-shell .episode-editor{grid-template-columns:1fr}.admin-chart{gap:2px}.admin-shell .section-heading select{width:100%}}

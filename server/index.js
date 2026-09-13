@@ -8,13 +8,23 @@ const file = process.env.DATA_FILE || path.join(__dirname, 'data.json');
 const seed = require('./catalog.json');
 let db = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {
   movies: seed, users: [], comments: [], ratings: [], reports: [], banners: [],
+  actors: [], directors: [], activity_logs: [], roles: [],
   settings: { name: 'Văn Luân', description: 'Xem phim Vietsub, thuyết minh và lồng tiếng chất lượng cao.', faq: 'Chọn phim, bấm Xem phim rồi chọn máy chủ và tập muốn xem. Nếu video không phát, hãy đổi máy chủ hoặc gửi báo lỗi.' },
 };
 function save() { fs.writeFileSync(file + '.tmp', JSON.stringify(db)); fs.renameSync(file + '.tmp', file); }
 if (db.settings?.name === 'Motchill') { db.settings.name = 'Văn Luân'; save(); }
+// Ensure new collections exist for older databases
+db.actors ||= []; db.directors ||= []; db.activity_logs ||= []; db.roles ||= []; db.videoServers ||= []; db.schedule ||= [];
+if (!db.videoServers.length) {
+  db.videoServers = [
+    { id: 'srv-1', name: 'Server K (VIP Fast)', priority: 1, status: 'online', is_default: true },
+    { id: 'srv-2', name: 'Server V (Backup)', priority: 2, status: 'online', is_default: false },
+    { id: 'srv-3', name: 'Server HLS Direct', priority: 3, status: 'online', is_default: false }
+  ];
+}
 const sessions = new Map();
 const attempts = new Map();
-const publicUser = ({ id, name, email, role, blocked, favorites = [], history = [], following = [], deleted = false, notificationPreferences = { newMovies: true, newEpisodes: true } }) => ({ id, name, email, role, blocked, favorites, history, following, deleted, notificationPreferences });
+const publicUser = ({ id, name, email, role, created_at, blocked, favorites = [], history = [], following = [], deleted = false, notificationPreferences = { newMovies: true, newEpisodes: true } }) => ({ id, name, email, role, created_at, blocked, favorites, history, following, deleted, notificationPreferences });
 const hash = (password, salt) => crypto.scryptSync(password, salt, 64).toString('hex');
 app.use(express.json({ limit: '5mb' }));
 app.use((req, res, next) => {
@@ -27,7 +37,12 @@ app.use((req, res, next) => {
   next();
 });
 const auth = (req, res, next) => req.user ? next() : res.status(401).json({ error: 'Vui lòng đăng nhập.' });
-const admin = (req, res, next) => req.user?.role === 'admin' ? next() : res.status(403).json({ error: 'Chỉ quản trị viên được thực hiện thao tác này.' });
+const admin = (req, res, next) => {
+  if (req.user?.role === 'admin') return next();
+  const staffPath = /^\/api\/admin(?:\/?$|\/statistics\/?$|\/movies(?:\/|$)|\/taxonomies\/|\/comments\/|\/ratings\/|\/banners(?:\/|$))/i;
+  if (req.user?.role === 'staff' && staffPath.test(req.path)) return next();
+  return res.status(403).json({ error: 'Bạn không có quyền thực hiện thao tác này.' });
+};
 const features = require('./features')(app, db, save, auth, admin);
 function signIn(res, user) {
   const token = crypto.randomBytes(32).toString('hex');
@@ -52,6 +67,7 @@ app.post('/api/auth/:action', (req, res) => {
     if (!existing || existing.blocked || existing.deleted || !crypto.timingSafeEqual(Buffer.from(existing.hash, 'hex'), Buffer.from(hash(password, existing.salt), 'hex'))) return res.status(401).json({ error: 'Email hoặc mật khẩu không đúng, hoặc tài khoản đã bị khóa.' });
     return signIn(res, existing);
   }
+  if (action === 'register' && db.settings.registration_enabled === false) return res.status(403).json({ error: 'Website đang tạm đóng đăng ký.' });
   if (!['register', 'setup'].includes(action)) return res.sendStatus(404);
   if (action === 'setup' && (process.env.RENDER || process.env.ADMIN_SETUP_TOKEN)) {
     const supplied = Buffer.from(String(req.body.setupToken || ''));
@@ -61,12 +77,13 @@ app.post('/api/auth/:action', (req, res) => {
   if (action === 'setup' && db.users.some(u => u.role === 'admin')) return res.status(403).json({ error: 'Quản trị viên đã được thiết lập.' });
   if (existing) return res.status(409).json({ error: 'Email đã được sử dụng.' });
   const salt = crypto.randomBytes(16).toString('hex');
-  const user = { id: crypto.randomUUID(), name: String(name || email.split('@')[0]).slice(0, 80), email: email.toLowerCase(), salt, hash: hash(password, salt), role: action === 'setup' ? 'admin' : 'user', favorites: [], history: [], following: [] };
+  const user = { id: crypto.randomUUID(), created_at: new Date().toISOString(), name: String(name || email.split('@')[0]).slice(0, 80), email: email.toLowerCase(), salt, hash: hash(password, salt), role: action === 'setup' ? 'admin' : 'user', favorites: [], history: [], following: [] };
   db.users.push(user); save(); signIn(res, user);
 });
 app.get('/api/catalog', (req, res) => res.json({ movies: db.movies.filter(features.visible).map(features.catalogueMovie), settings: db.settings, banners: db.banners.filter(b => !b.deleted && db.movies.some(m => m.slug === b.slug && features.visible(m))), taxonomies: Object.fromEntries(Object.entries(db.taxonomies).map(([k, v]) => [k, v.filter(c => !c.deleted)])) }));
 app.get('/api/movies/:slug/community', (req, res) => res.json({ comments: db.comments.filter(c => c.slug === req.params.slug && !c.hidden && !c.deleted), ratings: db.ratings.filter(r => r.slug === req.params.slug && !r.hidden) }));
 app.post('/api/movies/:slug/comments', auth, (req, res) => {
+  if (db.settings.comments_enabled === false) return res.status(403).json({ error: 'Website đang tạm đóng bình luận.' });
   const text = String(req.body.text || '').trim();
   if (!text || text.length > 2000 || !db.movies.some(m => m.slug === req.params.slug && !m.deleted)) return res.status(400).json({ error: 'Bình luận không hợp lệ (tối đa 2000 ký tự).' });
   const comment = { id: crypto.randomUUID(), slug: req.params.slug, text, userId: req.user.id, name: req.user.name, date: new Date().toISOString() };
@@ -105,9 +122,18 @@ app.post('/api/movies/:slug/view', (req, res) => {
   movie.daily_views ||= {}; movie.daily_views[day] = (movie.daily_views[day] || 0) + 1;
   db.dailyViews[day] = (db.dailyViews[day] || 0) + 1; save(); res.json({ ok: true });
 });
-app.get('/api/admin', admin, (req, res) => res.json({ ...db, users: db.users.map(publicUser) }));
+app.get('/api/admin', admin, (req, res) => res.json({
+  movies: db.movies, comments: db.comments, ratings: db.ratings, banners: db.banners,
+  taxonomies: db.taxonomies, settings: db.settings, actors: db.actors, directors: db.directors,
+  videoServers: db.videoServers, schedule: db.schedule, activity_logs: db.activity_logs, roles: db.roles,
+  users: req.user.role === 'admin' ? db.users.map(publicUser) : [], reports: req.user.role === 'admin' ? db.reports : []
+}));
 app.put('/api/admin/settings', admin, (req, res) => {
-  for (const key of ['name', 'description', 'faq', 'about', 'terms', 'privacy']) if (typeof req.body[key] === 'string') db.settings[key] = req.body[key].slice(0, 10000);
+  for (const key of ['logo', 'favicon']) if (req.body[key] && (typeof req.body[key] !== 'string' || !/^(https?:\/\/|\/storage\/|data:image\/)/i.test(req.body[key]))) return res.status(400).json({ error: 'URL ảnh không hợp lệ.' });
+  for (const key of ['registration_enabled', 'comments_enabled', 'maintenance_mode']) if (key in req.body && typeof req.body[key] !== 'boolean') return res.status(400).json({ error: 'Cài đặt bật/tắt phải là boolean.' });
+  for (const key of ['registration_enabled', 'comments_enabled', 'maintenance_mode']) if (key in req.body) db.settings[key] = req.body[key];
+  for (const key of ['name', 'description', 'faq', 'about', 'terms', 'privacy', 'logo', 'favicon', 'contact_email', 'footer', 'maintenance_message']) if (typeof req.body[key] === 'string') db.settings[key] = req.body[key].slice(0, 10000);
+  db.activity_logs.unshift({ id: crypto.randomUUID(), time: new Date().toISOString(), user: req.user.name, action: 'Cập nhật cấu hình website' });
   save(); res.json(db.settings);
 });
 app.post('/api/admin/movies', admin, (req, res) => {
@@ -115,24 +141,57 @@ app.post('/api/admin/movies', admin, (req, res) => {
   if (!movie.name || !/^[a-z0-9-]+$/.test(movie.slug || '') || !Array.isArray(movie.categories) || !Array.isArray(movie.regions) || !Array.isArray(movie.episodes)) return res.status(400).json({ error: 'Kiểm tra tên, slug, thể loại, quốc gia và tập phim.' });
   if (typeof movie.name !== 'string' || movie.name.length > 300 || movie.categories.some(c => !c || typeof c.name !== 'string' || typeof c.slug !== 'string') || movie.regions.some(c => !c || typeof c.name !== 'string' || typeof c.slug !== 'string') || movie.episodes.some(e => !e || typeof e.name !== 'string' || typeof e.server !== 'string' || typeof e.slug !== 'string' || !['mp4', 'm3u8', 'embed'].includes(e.type) || !/^https?:\/\//i.test(e.link || ''))) return res.status(400).json({ error: 'Thông tin phim hoặc nguồn tập không hợp lệ. URL video phải bắt đầu bằng http hoặc https.' });
   if (new Set(movie.episodes.map(e => e.slug)).size !== movie.episodes.length) return res.status(400).json({ error: 'Mỗi nguồn tập cần mã slug riêng biệt.' });
+  if (movie.status && !['ongoing', 'completed', 'trailer'].includes(movie.status)) return res.status(400).json({ error: 'Trạng thái phim không hợp lệ.' });
+  if (movie.episodes.some(e => e.language && !['Vietsub', 'Thuyết minh', 'Lồng tiếng'].includes(e.language))) return res.status(400).json({ error: 'Ngôn ngữ tập không hợp lệ.' });
   const i = db.movies.findIndex(m => m.slug === movie.slug);
   const before = i >= 0 ? db.movies[i] : null;
-  const value = { ...movie, id: i >= 0 ? db.movies[i].id : crypto.randomUUID(), updated_at: new Date().toISOString() };
+  if (before && movie.id !== before.id) return res.status(409).json({ error: 'Slug đã tồn tại. Hãy chọn slug khác.' });
+  const value = { ...before, ...movie, view_total: before?.view_total || 0, daily_views: before?.daily_views || {}, created_at: before ? (before.created_at || null) : new Date().toISOString(), id: i >= 0 ? db.movies[i].id : crypto.randomUUID(), updated_at: new Date().toISOString() };
   if (i >= 0) db.movies[i] = value; else db.movies.unshift(value);
   features.onMovieSaved(before, value);
+  db.activity_logs.unshift({ id: crypto.randomUUID(), time: new Date().toISOString(), user: req.user.name, action: (before ? 'Chỉnh sửa phim: ' : 'Thêm phim mới: ') + value.name });
   save(); res.json(value);
 });
 app.patch('/api/admin/:collection/:id', admin, (req, res) => {
   const { collection, id } = req.params;
-  const allowed = { movies: ['deleted', 'hidden'], users: ['blocked', 'role', 'deleted'], comments: ['hidden', 'deleted', 'pinned'], ratings: ['hidden'], reports: ['status', 'adminNote'], banners: ['deleted'] };
-  if (!allowed[collection]) return res.sendStatus(404);
+  const allowed = {
+    movies: ['deleted', 'hidden', 'is_recommended', 'is_hot', 'is_shown_in_theater', 'is_new', 'homepage_single', 'homepage_series', 'homepage_animation', 'homepage_top', 'homepage_rated', 'status'],
+    users: ['blocked', 'role', 'deleted'],
+    comments: ['hidden', 'deleted', 'pinned'],
+    ratings: ['hidden'],
+    reports: ['status', 'adminNote'],
+    banners: ['deleted'],
+    actors: ['name', 'avatar', 'bio', 'nationality', 'deleted'],
+    directors: ['name', 'avatar', 'bio', 'deleted'],
+    videoServers: ['name', 'priority', 'status', 'is_default', 'deleted'],
+    schedule: ['day', 'time', 'movie_slug', 'episode_name', 'note', 'deleted'],
+    roles: ['name', 'description', 'permissions', 'deleted']
+  };
+  if (!allowed[collection] || !db[collection]) return res.sendStatus(404);
   const item = db[collection].find(x => x.id === id);
   if (!item) return res.sendStatus(404);
   if (collection === 'users' && item.id === req.user.id) return res.status(400).json({ error: 'Không thể tự khóa hoặc hạ quyền tài khoản đang dùng.' });
-  for (const key of allowed[collection]) if (key in req.body) {
-    if (key === 'role' && !['admin', 'user'].includes(req.body[key])) continue;
-    item[key] = req.body[key];
+  for (const [key, value] of Object.entries(req.body)) {
+    if (!allowed[collection].includes(key)) return res.status(400).json({ error: 'Trường cập nhật không hợp lệ.' });
   }
+  if (collection === 'users' && item.role === 'admin' && (req.body.role && req.body.role !== 'admin' || req.body.deleted || req.body.blocked) && db.users.filter(u => u.role === 'admin' && !u.deleted && !u.blocked).length <= 1) return res.status(400).json({ error: 'Phải giữ ít nhất một Admin hoạt động.' });
+  Object.assign(item, req.body);
+  db.activity_logs.unshift({ id: crypto.randomUUID(), time: new Date().toISOString(), user: req.user.name, action: `Cập nhật ${collection} (ID: ${id})` });
+  if (db.activity_logs.length > 500) db.activity_logs = db.activity_logs.slice(0, 500);
+  save(); res.json({ ok: true });
+});
+app.post('/api/admin/:collection', admin, (req, res) => {
+  const { collection } = req.params;
+  if (!['actors', 'directors', 'videoServers', 'schedule', 'roles'].includes(collection)) return res.sendStatus(404);
+  const data = { id: crypto.randomUUID(), created_at: new Date().toISOString(), ...req.body };
+  db[collection].unshift(data);
+  db.activity_logs.unshift({ id: crypto.randomUUID(), time: new Date().toISOString(), user: req.user.name, action: `Thêm mới mục vào ${collection}: ${data.name || data.movie_slug || data.id}` });
+  save(); res.json(data);
+});
+app.delete('/api/admin/:collection/:id', admin, (req, res) => {
+  const { collection, id } = req.params;
+  if (!['actors', 'directors', 'videoServers', 'schedule', 'roles', 'activity_logs'].includes(collection)) return res.sendStatus(404);
+  db[collection] = db[collection].filter(x => x.id !== id);
   save(); res.json({ ok: true });
 });
 app.post('/api/admin/banners', admin, (req, res) => {

@@ -26,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "node scripts/dev.js",
-    "test:server": "node --test server/server.test.js server/features.test.js"
+    "test:server": "node --test server/server.test.js server/features.test.js server/admin.test.js"
   },
   "eslintConfig": {
     "extends": [
