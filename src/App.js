@@ -124,23 +124,29 @@ function HomeSection({ title, wide, category }) {
 function Home() {
   const { movies, banners, user } = useApp();
   const rail = useRef();
-  const heroMovie = movies.find(m => m.is_hot && m.poster_url) || movies[0];
+  const heroMovie = movies.find(m => m.is_hot && m.thumb_url) || movies[0];
   const featured = movies.filter(m => m.is_recommended || m.is_hot).slice(0, 20);
 
   return (
     <main className="container home">
       {heroMovie && (
-        <section className="hero-banner" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', marginBottom: '24px', background: '#0b111a', border: '1px solid #1f2d40', minHeight: '320px', display: 'flex', alignItems: 'flex-end', padding: '32px' }}>
-          <div style={{ position: 'absolute', inset: 0, backgroundImage: `url("${safeMedia(heroMovie.poster_url || heroMovie.thumb_url)}")`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.35, filter: 'blur(2px)' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #080d14 15%, rgba(8,13,20,0.4) 70%, transparent)' }} />
-          <div style={{ position: 'relative', zIndex: 2, maxWidth: '700px' }}>
-            <span style={{ background: '#f98a27', color: '#000', fontWeight: 'bold', padding: '3px 8px', borderRadius: '4px', fontSize: '11px', textTransform: 'uppercase' }}>🔥 PHIM NỔI BẬT NHẤT</span>
-            <h1 style={{ fontSize: '32px', color: '#fff', margin: '10px 0 6px', fontWeight: '900', textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>{heroMovie.name}</h1>
-            <h2 style={{ fontSize: '16px', color: '#c5d2e5', fontWeight: '400', marginBottom: '12px' }}>{heroMovie.origin_name} ({heroMovie.publish_year}) · {heroMovie.quality} · {heroMovie.language}</h2>
-            <p style={{ color: '#94a3b8', fontSize: '13px', lineHeight: '1.6', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{heroMovie.description}</p>
-            <div style={{ display: 'flex', gap: '12px', marginTop: '18px' }}>
-              <Link to={'/xem-phim/' + heroMovie.slug} className="primary-button" style={{ padding: '10px 24px', fontSize: '15px' }}>▶ Xem Ngay</Link>
-              <Link to={'/phim/' + heroMovie.slug} style={{ background: '#223044', color: '#fff', padding: '10px 18px', borderRadius: '4px', fontWeight: '600' }}>Thông Tin Chi Tiết</Link>
+        <section style={{ display: 'flex', gap: '24px', alignItems: 'center', background: 'linear-gradient(135deg, #101928, #090e17)', borderRadius: '12px', padding: '24px', marginBottom: '28px', border: '1px solid #1f2f45', position: 'relative', overflow: 'hidden', boxShadow: '0 8px 30px rgba(0,0,0,0.5)' }}>
+          <div style={{ position: 'absolute', inset: 0, backgroundImage: `url("${safeMedia(heroMovie.poster_url || heroMovie.thumb_url)}")`, backgroundSize: 'cover', backgroundPosition: 'center', opacity: 0.18, filter: 'blur(3px)' }} />
+          <div style={{ position: 'relative', zIndex: 2, flexShrink: 0, width: '130px' }}>
+            <Poster movie={heroMovie} style={{ width: '100%', borderRadius: '8px', boxShadow: '0 8px 24px rgba(0,0,0,0.7)' }} />
+          </div>
+          <div style={{ position: 'relative', zIndex: 2, flex: 1, minWidth: 0 }}>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap' }}>
+              <span style={{ background: '#f98a27', color: '#000', fontWeight: 'bold', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', textTransform: 'uppercase' }}>🔥 PHIM HOT ĐỀ CỬ</span>
+              <span style={{ background: '#2563eb', color: '#fff', padding: '2px 8px', borderRadius: '4px', fontSize: '11px', fontWeight: 'bold' }}>{heroMovie.quality || 'FHD'}</span>
+              <span style={{ background: '#16a34a', color: '#fff', padding: '2px 8px', borderRadius: '4px', fontSize: '11px' }}>{heroMovie.language || 'Vietsub'}</span>
+            </div>
+            <h1 style={{ fontSize: '24px', color: '#fff', margin: '0 0 6px', fontWeight: 'bold', lineHeight: '1.3' }}>{heroMovie.name}</h1>
+            <h2 style={{ fontSize: '14px', color: '#94a3b8', fontWeight: 'normal', margin: '0 0 10px' }}>{heroMovie.origin_name} ({heroMovie.publish_year}) · <span className="gold">★ {heroMovie.rating_star}</span> · {heroMovie.episode_current}</h2>
+            <p style={{ color: '#cbd5e1', fontSize: '13px', lineHeight: '1.6', margin: '0 0 16px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{heroMovie.description}</p>
+            <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+              <Link to={'/xem-phim/' + heroMovie.slug} className="primary-button" style={{ padding: '8px 20px', fontSize: '14px' }}>▶ Xem Ngay</Link>
+              <Link to={'/phim/' + heroMovie.slug} style={{ background: '#1e293b', color: '#fff', padding: '8px 16px', borderRadius: '6px', border: '1px solid #334155', fontSize: '13px' }}>Chi Tiết Phim</Link>
             </div>
           </div>
         </section>
@@ -439,7 +445,7 @@ function Detail({ watching = false }) {
   );
 }
 function Auth({ adminOnly = false }) {
-  const { setUser, needsSetup, setupRequiresToken, refresh, notify, settings } = useApp();
+  const { setUser, refresh, notify } = useApp();
   const [mode, setMode] = useState(adminOnly ? 'admin-login' : 'login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
