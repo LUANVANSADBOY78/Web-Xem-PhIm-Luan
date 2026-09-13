@@ -1,5 +1,1806 @@
 [
   {
+    "id": "92869",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Oppenheimer",
+    "origin_name": "Oppenheimer",
+    "slug": "oppenheimer-2023",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg",
+    "type": "single",
+    "status": "completed",
+    "episode_time": "180 phút",
+    "episode_current": "Full HD",
+    "episode_total": "1",
+    "quality": "FHD",
+    "language": "Vietsub",
+    "publish_year": 2023,
+    "is_shown_in_theater": true,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 3900000,
+    "view_day": 42000,
+    "view_week": 360000,
+    "view_month": 1100000,
+    "rating_count": 10800,
+    "rating_star": "9.6",
+    "categories": [
+      {
+        "id": "16",
+        "name": "Tài Liệu",
+        "slug": "tai-lieu"
+      },
+      {
+        "id": "18",
+        "name": "Chính kịch",
+        "slug": "chinh-kich"
+      },
+      {
+        "id": "28",
+        "name": "Chiến Tranh",
+        "slug": "chien-tranh"
+      }
+    ],
+    "regions": [
+      {
+        "id": "46",
+        "name": "Mỹ",
+        "slug": "my"
+      },
+      {
+        "id": "5",
+        "name": "Âu Mỹ",
+        "slug": "au-my"
+      }
+    ],
+    "description": "Câu chuyện về nhà vật lý lý thuyết người Mỹ J. Robert Oppenheimer, người đóng vai trò then chốt trong Dự án Manhattan và sự phát triển của bom nguyên tử.",
+    "actor": "Cillian Murphy, Emily Blunt, Matt Damon, Robert Downey Jr., Florence Pugh",
+    "director": "Christopher Nolan",
+    "episodes": [
+      {
+        "id": "ep-opp-1",
+        "movie_id": "oppenheimer",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Full",
+        "slug": "full-vip",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "90688",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Dune: Hành Tinh Cát (Phần 2)",
+    "origin_name": "Dune: Part Two",
+    "slug": "dune-hanh-tinh-cat-phan-2",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/xOMo8BRK7PfcJv9JCnx7s520bne.jpg",
+    "type": "single",
+    "status": "completed",
+    "episode_time": "166 phút",
+    "episode_current": "Full HD",
+    "episode_total": "1",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2024,
+    "is_shown_in_theater": true,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 4200000,
+    "view_day": 62000,
+    "view_week": 490000,
+    "view_month": 1400000,
+    "rating_count": 11200,
+    "rating_star": "9.5",
+    "categories": [
+      {
+        "id": "10",
+        "name": "Viễn Tưởng",
+        "slug": "vien-tuong"
+      },
+      {
+        "id": "11",
+        "name": "Phiêu Lưu",
+        "slug": "phieu-luu"
+      },
+      {
+        "id": "1",
+        "name": "Hành Động",
+        "slug": "hanh-dong"
+      }
+    ],
+    "regions": [
+      {
+        "id": "46",
+        "name": "Mỹ",
+        "slug": "my"
+      },
+      {
+        "id": "5",
+        "name": "Âu Mỹ",
+        "slug": "au-my"
+      }
+    ],
+    "description": "Paul Atreides hợp nhất với Chani và người Fremen trong khi tìm kiếm sự trả thù chống lại những kẻ âm mưu đã hủy diệt gia đình anh.",
+    "actor": "Timothée Chalamet, Zendaya, Rebecca Ferguson, Javier Bardem, Austin Butler",
+    "director": "Denis Villeneuve",
+    "episodes": [
+      {
+        "id": "ep-dune2-1",
+        "movie_id": "dune-2",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Full",
+        "slug": "full-vip",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260820/Bg8E38Qv/index.m3u8"
+      },
+      {
+        "id": "ep-dune2-2",
+        "movie_id": "dune-2",
+        "server": "Server Thuyết Minh",
+        "name": "Full",
+        "slug": "full-tm",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/57ip9H9r/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "85037",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Vụng Trộm Không Thể Giấu",
+    "origin_name": "Hidden Love",
+    "slug": "vung-trom-khong-the-giau",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/4y7T2K9o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/5y7T2K9o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "type": "series",
+    "status": "completed",
+    "episode_time": "45 phút/tập",
+    "episode_current": "Hoàn Tất (25/25)",
+    "episode_total": "25",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2023,
+    "is_shown_in_theater": false,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 5800000,
+    "view_day": 55000,
+    "view_week": 410000,
+    "view_month": 1300000,
+    "rating_count": 14200,
+    "rating_star": "9.4",
+    "categories": [
+      {
+        "id": "2",
+        "name": "Tình Cảm",
+        "slug": "tinh-cam"
+      },
+      {
+        "id": "80",
+        "name": "Học Đường",
+        "slug": "hoc-duong"
+      },
+      {
+        "id": "3",
+        "name": "Hài Hước",
+        "slug": "hai-huoc"
+      }
+    ],
+    "regions": [
+      {
+        "id": "1",
+        "name": "Trung Quốc",
+        "slug": "trung-quoc"
+      }
+    ],
+    "description": "Tang Trĩ từ thời cấp 2 đã thầm thương trộm nhớ Đoàn Gia Hứa – bạn thân của anh trai. Sau nhiều năm xa cách, khi gặp lại ở giảng đường đại học, tình cảm năm xưa lại bùng cháy.",
+    "actor": "Triệu Lộ Tư, Trần Triết Viễn, Mã Bá Khiên, Tăng Lê, Khâu Tâm Chí",
+    "director": "Lý Thanh Dung",
+    "episodes": [
+      {
+        "id": "vtktg-ep-1",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 01",
+        "slug": "tap-1",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-2",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 02",
+        "slug": "tap-2",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-3",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 03",
+        "slug": "tap-3",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-4",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 04",
+        "slug": "tap-4",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-5",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 05",
+        "slug": "tap-5",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-6",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 06",
+        "slug": "tap-6",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-7",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 07",
+        "slug": "tap-7",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-8",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 08",
+        "slug": "tap-8",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-9",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 09",
+        "slug": "tap-9",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-10",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 10",
+        "slug": "tap-10",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-11",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 11",
+        "slug": "tap-11",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-12",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 12",
+        "slug": "tap-12",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-13",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 13",
+        "slug": "tap-13",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-14",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 14",
+        "slug": "tap-14",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-15",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 15",
+        "slug": "tap-15",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-16",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 16",
+        "slug": "tap-16",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-17",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 17",
+        "slug": "tap-17",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-18",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 18",
+        "slug": "tap-18",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-19",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 19",
+        "slug": "tap-19",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-20",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 20",
+        "slug": "tap-20",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-21",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 21",
+        "slug": "tap-21",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-22",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 22",
+        "slug": "tap-22",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-23",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 23",
+        "slug": "tap-23",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-24",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 24",
+        "slug": "tap-24",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "vtktg-ep-25",
+        "movie_id": "hidden-love",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 25",
+        "slug": "tap-25",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "90424",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Trường Nguyệt Tẫn Minh",
+    "origin_name": "Till The End Of The Moon",
+    "slug": "truong-nguyet-tan-minh",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/2y7T2K9o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/3y7T2K9o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "type": "series",
+    "status": "completed",
+    "episode_time": "45 phút/tập",
+    "episode_current": "Hoàn Tất (40/40)",
+    "episode_total": "40",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2023,
+    "is_shown_in_theater": false,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 6700000,
+    "view_day": 65000,
+    "view_week": 480000,
+    "view_month": 1600000,
+    "rating_count": 16500,
+    "rating_star": "9.5",
+    "categories": [
+      {
+        "id": "4",
+        "name": "Cổ Trang",
+        "slug": "co-trang"
+      },
+      {
+        "id": "2",
+        "name": "Tình Cảm",
+        "slug": "tinh-cam"
+      },
+      {
+        "id": "60",
+        "name": "Thần Thoại",
+        "slug": "than-thoai"
+      }
+    ],
+    "regions": [
+      {
+        "id": "1",
+        "name": "Trung Quốc",
+        "slug": "trung-quoc"
+      }
+    ],
+    "description": "Để cứu vớt tam giới khỏi Ma thần Đạm Đài Tẫn, Lê Tô Tô – con gái của Chưởng môn phái Hành Dương đã quay về 500 năm trước để ngăn chặn chàng hoá ma.",
+    "actor": "La Vân Hi, Bạch Lộc, Trần Đô Linh, Đặng Vi, Tôn Trân Ni",
+    "director": "Cúc Giác Lượng",
+    "episodes": [
+      {
+        "id": "tntm-ep-1",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 01",
+        "slug": "tap-1",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-2",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 02",
+        "slug": "tap-2",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-3",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 03",
+        "slug": "tap-3",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-4",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 04",
+        "slug": "tap-4",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-5",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 05",
+        "slug": "tap-5",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-6",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 06",
+        "slug": "tap-6",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-7",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 07",
+        "slug": "tap-7",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-8",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 08",
+        "slug": "tap-8",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-9",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 09",
+        "slug": "tap-9",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-10",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 10",
+        "slug": "tap-10",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-11",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 11",
+        "slug": "tap-11",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-12",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 12",
+        "slug": "tap-12",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-13",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 13",
+        "slug": "tap-13",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-14",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 14",
+        "slug": "tap-14",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-15",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 15",
+        "slug": "tap-15",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-16",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 16",
+        "slug": "tap-16",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-17",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 17",
+        "slug": "tap-17",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-18",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 18",
+        "slug": "tap-18",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-19",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 19",
+        "slug": "tap-19",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-20",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 20",
+        "slug": "tap-20",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-21",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 21",
+        "slug": "tap-21",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-22",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 22",
+        "slug": "tap-22",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-23",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 23",
+        "slug": "tap-23",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-24",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 24",
+        "slug": "tap-24",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-25",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 25",
+        "slug": "tap-25",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-26",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 26",
+        "slug": "tap-26",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-27",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 27",
+        "slug": "tap-27",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-28",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 28",
+        "slug": "tap-28",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-29",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 29",
+        "slug": "tap-29",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-30",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 30",
+        "slug": "tap-30",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-31",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 31",
+        "slug": "tap-31",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-32",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 32",
+        "slug": "tap-32",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-33",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 33",
+        "slug": "tap-33",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-34",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 34",
+        "slug": "tap-34",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-35",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 35",
+        "slug": "tap-35",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-36",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 36",
+        "slug": "tap-36",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-37",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 37",
+        "slug": "tap-37",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-38",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 38",
+        "slug": "tap-38",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-39",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 39",
+        "slug": "tap-39",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "tntm-ep-40",
+        "movie_id": "truong-nguyet-tan-minh",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 40",
+        "slug": "tap-40",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "85111",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Deadpool & Wolverine",
+    "origin_name": "Deadpool & Wolverine",
+    "slug": "deadpool-and-wolverine-2024",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/yDHYTfA3R0jFYba16jBB1ef8oIt.jpg",
+    "type": "single",
+    "status": "completed",
+    "episode_time": "128 phút",
+    "episode_current": "Full HD",
+    "episode_total": "1",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2024,
+    "is_shown_in_theater": true,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 5120000,
+    "view_day": 78000,
+    "view_week": 590000,
+    "view_month": 1800000,
+    "rating_count": 14200,
+    "rating_star": "9.3",
+    "categories": [
+      {
+        "id": "1",
+        "name": "Hành Động",
+        "slug": "hanh-dong"
+      },
+      {
+        "id": "3",
+        "name": "Hài Hước",
+        "slug": "hai-huoc"
+      },
+      {
+        "id": "10",
+        "name": "Viễn Tưởng",
+        "slug": "vien-tuong"
+      }
+    ],
+    "regions": [
+      {
+        "id": "46",
+        "name": "Mỹ",
+        "slug": "my"
+      },
+      {
+        "id": "5",
+        "name": "Âu Mỹ",
+        "slug": "au-my"
+      }
+    ],
+    "description": "Wade Wilson mệt mỏi với cuộc sống thường nhật và buông bỏ thân phận Deadpool. Nhưng khi vũ trụ đối mặt với sự hủy diệt, anh phải hợp tác với một Wolverine bất đắc dĩ để giải cứu thế giới.",
+    "actor": "Ryan Reynolds, Hugh Jackman, Emma Corrin, Morena Baccarin, Rob Delaney",
+    "director": "Shawn Levy",
+    "episodes": [
+      {
+        "id": "ep-dpw-1",
+        "movie_id": "deadpool-wolverine",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Full",
+        "slug": "full-vip",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260820/Bg8E38Qv/index.m3u8"
+      },
+      {
+        "id": "ep-dpw-2",
+        "movie_id": "deadpool-wolverine",
+        "server": "Server Thuyết Minh",
+        "name": "Full",
+        "slug": "full-tm",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/57ip9H9r/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "86343",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Thám Tử Lừng Danh Conan",
+    "origin_name": "Detective Conan",
+    "slug": "tham-tu-lung-danh-conan",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/3Uhp0h7Qd3xV4aT1v7w5Vb0Onv4bK.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/5Uhp0h7Qd3xV4aT1v7w5Vb0Onv4bK.jpg",
+    "type": "series",
+    "status": "ongoing",
+    "episode_time": "24 phút/tập",
+    "episode_current": "Tập 1135",
+    "episode_total": "1200",
+    "quality": "FHD",
+    "language": "Vietsub + Lồng Tiếng",
+    "publish_year": 2024,
+    "is_shown_in_theater": false,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 8200000,
+    "view_day": 95000,
+    "view_week": 720000,
+    "view_month": 2100000,
+    "rating_count": 19800,
+    "rating_star": "9.7",
+    "categories": [
+      {
+        "id": "92",
+        "name": "Anime & Hoạt Hình",
+        "slug": "hoat-hinh"
+      },
+      {
+        "id": "19",
+        "name": "Bí ẩn",
+        "slug": "bi-an"
+      },
+      {
+        "id": "6",
+        "name": "Hình Sự",
+        "slug": "hinh-su"
+      }
+    ],
+    "regions": [
+      {
+        "id": "3",
+        "name": "Nhật Bản",
+        "slug": "nhat-ban"
+      }
+    ],
+    "description": "Kudo Shinichi, một thám tử trung học tài ba, bị Tổ Chức Áo Đen đầu độc khiến cơ thể teo nhỏ thành đứa trẻ tiểu học. Dưới thân phận Edogawa Conan, cậu tiếp tục phá giải những vụ án hóc búa.",
+    "actor": "Minami Takayama, Wakana Yamazaki, Akira Kamiya, Megumi Hayashibara",
+    "director": "Kenji Kodama, Yasuichiro Yamamoto",
+    "episodes": [
+      {
+        "id": "conan-ep-1",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 01",
+        "slug": "tap-1",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-2",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 02",
+        "slug": "tap-2",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-3",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 03",
+        "slug": "tap-3",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-4",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 04",
+        "slug": "tap-4",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-5",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 05",
+        "slug": "tap-5",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-6",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 06",
+        "slug": "tap-6",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-7",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 07",
+        "slug": "tap-7",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-8",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 08",
+        "slug": "tap-8",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-9",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 09",
+        "slug": "tap-9",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-10",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 10",
+        "slug": "tap-10",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-11",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 11",
+        "slug": "tap-11",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-12",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 12",
+        "slug": "tap-12",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-13",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 13",
+        "slug": "tap-13",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-14",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 14",
+        "slug": "tap-14",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-15",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 15",
+        "slug": "tap-15",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-16",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 16",
+        "slug": "tap-16",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-17",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 17",
+        "slug": "tap-17",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-18",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 18",
+        "slug": "tap-18",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-19",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 19",
+        "slug": "tap-19",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "conan-ep-20",
+        "movie_id": "conan",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 20",
+        "slug": "tap-20",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "92753",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Vua Hải Tặc: One Piece",
+    "origin_name": "One Piece",
+    "slug": "one-piece-vua-hai-tac",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/cMD9Ygz11xYxfGcuIDBJu9ioC9g.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/4Mt7whox67MBLEManeMiootorG2.jpg",
+    "type": "series",
+    "status": "ongoing",
+    "episode_time": "24 phút/tập",
+    "episode_current": "Tập 1120",
+    "episode_total": "1200",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2024,
+    "is_shown_in_theater": false,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 9800000,
+    "view_day": 120000,
+    "view_week": 890000,
+    "view_month": 2500000,
+    "rating_count": 24500,
+    "rating_star": "9.8",
+    "categories": [
+      {
+        "id": "92",
+        "name": "Anime & Hoạt Hình",
+        "slug": "hoat-hinh"
+      },
+      {
+        "id": "1",
+        "name": "Hành Động",
+        "slug": "hanh-dong"
+      },
+      {
+        "id": "11",
+        "name": "Phiêu Lưu",
+        "slug": "phieu-luu"
+      }
+    ],
+    "regions": [
+      {
+        "id": "3",
+        "name": "Nhật Bản",
+        "slug": "nhat-ban"
+      }
+    ],
+    "description": "Monkey D. Luffy, một cậu bé mang ước mơ trở thành Vua Hải Tặc, bắt đầu hành trình tìm kiếm kho báu huyền thoại One Piece cùng băng Mũ Rơm.",
+    "actor": "Mayumi Tanaka, Akemi Okamura, Kazuya Nakai, Kappei Yamaguchi, Hiroaki Hirata",
+    "director": "Konosuke Uda",
+    "episodes": [
+      {
+        "id": "op-ep-1",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 01",
+        "slug": "tap-1",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-2",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 02",
+        "slug": "tap-2",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-3",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 03",
+        "slug": "tap-3",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-4",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 04",
+        "slug": "tap-4",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-5",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 05",
+        "slug": "tap-5",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-6",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 06",
+        "slug": "tap-6",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-7",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 07",
+        "slug": "tap-7",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-8",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 08",
+        "slug": "tap-8",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-9",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 09",
+        "slug": "tap-9",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-10",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 10",
+        "slug": "tap-10",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-11",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 11",
+        "slug": "tap-11",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-12",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 12",
+        "slug": "tap-12",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-13",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 13",
+        "slug": "tap-13",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-14",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 14",
+        "slug": "tap-14",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-15",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 15",
+        "slug": "tap-15",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-16",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 16",
+        "slug": "tap-16",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-17",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 17",
+        "slug": "tap-17",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-18",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 18",
+        "slug": "tap-18",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-19",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 19",
+        "slug": "tap-19",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-20",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 20",
+        "slug": "tap-20",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-21",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 21",
+        "slug": "tap-21",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-22",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 22",
+        "slug": "tap-22",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-23",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 23",
+        "slug": "tap-23",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      },
+      {
+        "id": "op-ep-24",
+        "movie_id": "one-piece",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 24",
+        "slug": "tap-24",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "87833",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Nữ Hoàng Nước Mắt",
+    "origin_name": "Queen of Tears",
+    "slug": "nu-hoang-nuoc-mat-queen-of-tears",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/6y7T2K9o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/9y7T2K9o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "type": "series",
+    "status": "completed",
+    "episode_time": "70 phút/tập",
+    "episode_current": "Hoàn Tất (16/16)",
+    "episode_total": "16",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2024,
+    "is_shown_in_theater": false,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 4500000,
+    "view_day": 82000,
+    "view_week": 540000,
+    "view_month": 1500000,
+    "rating_count": 12500,
+    "rating_star": "9.6",
+    "categories": [
+      {
+        "id": "2",
+        "name": "Tình Cảm",
+        "slug": "tinh-cam"
+      },
+      {
+        "id": "3",
+        "name": "Hài Hước",
+        "slug": "hai-huoc"
+      },
+      {
+        "id": "18",
+        "name": "Chính kịch",
+        "slug": "chinh-kich"
+      }
+    ],
+    "regions": [
+      {
+        "id": "2",
+        "name": "Hàn Quốc",
+        "slug": "han-quoc"
+      }
+    ],
+    "description": "Nữ hoàng trung tâm thương mại và hoàng tử siêu thị trải qua một cuộc khủng hoảng hôn nhân – cho đến khi tình yêu bắt đầu nảy nở trở lại một cách kỳ diệu.",
+    "actor": "Kim Soo-hyun, Kim Ji-won, Park Sung-hoon, Kwak Dong-yeon, Lee Joo-bin",
+    "director": "Jang Young-woo, Kim Hee-won",
+    "episodes": [
+      {
+        "id": "qot-ep-1",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 01",
+        "slug": "tap-1",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-2",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 02",
+        "slug": "tap-2",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-3",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 03",
+        "slug": "tap-3",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-4",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 04",
+        "slug": "tap-4",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-5",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 05",
+        "slug": "tap-5",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-6",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 06",
+        "slug": "tap-6",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-7",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 07",
+        "slug": "tap-7",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-8",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 08",
+        "slug": "tap-8",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-9",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 09",
+        "slug": "tap-9",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-10",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 10",
+        "slug": "tap-10",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-11",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 11",
+        "slug": "tap-11",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-12",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 12",
+        "slug": "tap-12",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-13",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 13",
+        "slug": "tap-13",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-14",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 14",
+        "slug": "tap-14",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-15",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 15",
+        "slug": "tap-15",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "qot-ep-16",
+        "movie_id": "queen-of-tears",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Tập 16",
+        "slug": "tap-16",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "93799",
+    "created_at": "2026-09-13T04:24:51.189Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Lật Mặt 7: Một Điều Ước",
+    "origin_name": "Face Off 7: One Wish",
+    "slug": "lat-mat-7-mot-dieu-uoc",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/8c0N3X3o2V4aT1v7w5Vb0Onv4bK.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/mBaXZkOxN6u9W4V1n3Q9A7m7pY.jpg",
+    "type": "single",
+    "status": "completed",
+    "episode_time": "138 phút",
+    "episode_current": "Full HD",
+    "episode_total": "1",
+    "quality": "FHD",
+    "language": "Lồng Tiếng",
+    "publish_year": 2024,
+    "is_shown_in_theater": true,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 3120000,
+    "view_day": 51200,
+    "view_week": 420000,
+    "view_month": 980000,
+    "rating_count": 9410,
+    "rating_star": "9.4",
+    "categories": [
+      {
+        "id": "68",
+        "name": "Gia Đình",
+        "slug": "gia-dinh"
+      },
+      {
+        "id": "5",
+        "name": "Tâm Lý",
+        "slug": "tam-ly"
+      },
+      {
+        "id": "18",
+        "name": "Chính kịch",
+        "slug": "chinh-kich"
+      }
+    ],
+    "regions": [
+      {
+        "id": "40",
+        "name": "Việt Nam",
+        "slug": "viet-nam"
+      }
+    ],
+    "description": "Bộ phim xoay quanh câu chuyện gia đình bà Hai 73 tuổi cùng 5 người con trưởng thành lập nghiệp ở khắp nơi. Một biến cố xảy ra khiến những người con phải đối mặt với câu hỏi ai sẽ chăm sóc mẹ già.",
+    "actor": "Thanh Hiền, Trương Minh Cường, Đinh Y Nhung, Quách Ngọc Tuyên, Trâm Anh",
+    "director": "Lý Hải",
+    "episodes": [
+      {
+        "id": "ep-lm7-1",
+        "movie_id": "lat-mat-7",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Full",
+        "slug": "full-vip",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/57ip9H9r/index.m3u8"
+      },
+      {
+        "id": "ep-lm7-2",
+        "movie_id": "lat-mat-7",
+        "server": "Server Thuyết Minh",
+        "name": "Full",
+        "slug": "full-tm",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260831/ljjy0751/index.m3u8"
+      }
+    ]
+  },
+  {
+    "id": "88521",
+    "created_at": "2026-09-13T04:24:51.188Z",
+    "updated_at": "2026-09-13T04:24:51.189Z",
+    "deleted": false,
+    "hidden": false,
+    "name": "Mai",
+    "origin_name": "Mai",
+    "slug": "mai-2024",
+    "thumb_url": "https://image.tmdb.org/t/p/w500/b0Onv4bK7fD5d5aT8Q4aT1v7w5V.jpg",
+    "poster_url": "https://image.tmdb.org/t/p/original/mBaXZkOxN6u9W4V1n3Q9A7m7pY.jpg",
+    "type": "single",
+    "status": "completed",
+    "episode_time": "131 phút",
+    "episode_current": "Full HD",
+    "episode_total": "1",
+    "quality": "FHD",
+    "language": "Vietsub + Thuyết Minh",
+    "publish_year": 2024,
+    "is_shown_in_theater": true,
+    "is_recommended": true,
+    "is_hot": true,
+    "view_total": 2894500,
+    "view_day": 45200,
+    "view_week": 312000,
+    "view_month": 850000,
+    "rating_count": 8520,
+    "rating_star": "9.2",
+    "categories": [
+      {
+        "id": "2",
+        "name": "Tình Cảm",
+        "slug": "tinh-cam"
+      },
+      {
+        "id": "5",
+        "name": "Tâm Lý",
+        "slug": "tam-ly"
+      },
+      {
+        "id": "18",
+        "name": "Chính kịch",
+        "slug": "chinh-kich"
+      }
+    ],
+    "regions": [
+      {
+        "id": "40",
+        "name": "Việt Nam",
+        "slug": "viet-nam"
+      }
+    ],
+    "description": "Mai kể về cuộc đời của người phụ nữ cùng tên do Phương Anh Đào thủ vai. Mai là nhân viên massage, mẹ đơn thân, luôn chịu nhiều định kiến xã hội. Cuộc đời cô bước sang trang mới khi gặp Dương (Tuấn Trần), chàng công tử đào hoa kém tuổi.",
+    "actor": "Phương Anh Đào, Tuấn Trần, Trấn Thành, Hồng Đào, Uyển Ân",
+    "director": "Trấn Thành",
+    "episodes": [
+      {
+        "id": "ep-mai-1",
+        "movie_id": "mai-2024",
+        "server": "Server VIP (K-Vietsub)",
+        "name": "Full",
+        "slug": "full-vip",
+        "type": "m3u8",
+        "link": "https://v7.kkphimplayer7.com/20260826/3hQ5mFzr/index.m3u8"
+      },
+      {
+        "id": "ep-mai-2",
+        "movie_id": "mai-2024",
+        "server": "Server Dự Phòng (V-Vietsub)",
+        "name": "Full",
+        "slug": "full-backup",
+        "type": "m3u8",
+        "link": "https://v8.streamvsmov.com/stream/82a5b5ad-7482-418a-b181-9929703b94ac/master.m3u8"
+      }
+    ]
+  },
+  {
     "id": "84191",
     "name": "Đầu Xuân Tươi Sáng",
     "origin_name": "The Early Spring",
@@ -18,10 +1819,10 @@
     "is_recommended": true,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 1467164,
+    "view_total": 1467173,
     "view_day": 9483,
-    "view_week": 712000,
-    "view_month": 1136932,
+    "view_week": 712003,
+    "view_month": 1136935,
     "rating_count": 4849,
     "rating_star": "7.6",
     "created_at": "2026-08-26T10:00:35.000Z",
@@ -110,7 +1911,10 @@
     ],
     "description": "phim \"đầu xuân tươi sáng\" xoay quanh câu chuyện về thượng chi đào, một cô gái trẻ từ thành phố nhỏ, dũng cảm bước chân vào thủ đô sôi động bắc kinh. đ [...]",
     "actor": "Chi-Cheng Chian, Gao Xiaoxian, Jing Boran, Sun Qian, Liu Xiaobei, Qi Tianqing, Zhang Yezi, Ning Xin, Zhao Zhenyu, Zhang You",
-    "director": "Đang cập nhật"
+    "director": "Đang cập nhật",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "84248",
@@ -131,10 +1935,10 @@
     "is_recommended": true,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 219229,
+    "view_total": 219232,
     "view_day": 3504,
-    "view_week": 163001,
-    "view_month": 217193,
+    "view_week": 163002,
+    "view_month": 217194,
     "rating_count": 503,
     "rating_star": "7.8",
     "created_at": "2026-08-31T05:30:07.000Z",
@@ -214,7 +2018,10 @@
     ],
     "description": "phim \"bay vào trái tim anh\" là câu chuyện về nguyễn tư nhàn, một cô tiếp viên hàng không trẻ trung và năng động, luôn hoài bão trở thành một phi công  [...]",
     "actor": "Zheng Shilong, Miles Wei, Liu Xiening, Fei Qiming, Zhao Qing, Jin Zehao, Zhao Xuan, Ma Yujie, Ji Meihan",
-    "director": "Đang cập nhật"
+    "director": "Đang cập nhật",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "82142",
@@ -235,7 +2042,7 @@
     "is_recommended": true,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 1578815,
+    "view_total": 1578816,
     "view_day": 3270,
     "view_week": 232864,
     "view_month": 438077,
@@ -290,7 +2097,10 @@
     ],
     "description": "trên motchilltv, một trong những trang web phim trực tuyến hàng đầu, người xem sẽ có cơ hội thưởng thức series hẹn hò đầy kịch tính đến từ nhật bản ma [...]",
     "actor": "MEGUMI, Nagano, Awich",
-    "director": "MEGUMI"
+    "director": "MEGUMI",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "82205",
@@ -406,7 +2216,7 @@
     "is_recommended": true,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 127523,
+    "view_total": 127524,
     "view_day": 460,
     "view_week": 44422,
     "view_month": 72433,
@@ -494,7 +2304,10 @@
     ],
     "description": "jack reacher 2022: phát súng cuối cùng là một bộ phim hành động, phiêu lưu và chính kịch đầy kịch tính. được đạo diễn bởi nick santora, bộ phim đưa kh [...]",
     "actor": "Amy Pocha, Seth Cohen, Sam Hill, Lisa Kussner, Alan Ritchson, Agnez Mo, Sydelle Noel, Anggun, Christopher Rodriguez Marquette, Kevin Corrigan",
-    "director": "Nick Santora"
+    "director": "Nick Santora",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "84132",
@@ -1014,7 +2827,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 1298,
+    "view_total": 1299,
     "view_day": 175,
     "view_week": 1298,
     "view_month": 1298,
@@ -1069,7 +2882,10 @@
     ],
     "description": "phim \"gián đột biến\" (the nest) là một tác phẩm kinh dị nổi tiếng với cốt truyện hấp dẫn và đầy kịch tính. được đạo diễn bởi terence h. winkless, bộ p [...]",
     "actor": "Terence H. Winkless, Julie Corman, Robert Lansing, Lisa Langlois, Franc Luz, Terri Treas, Stephen Davies, Diana Bellamy, Jack Collins, Nancy Morgan, Jeff Winkless, Steve Tannen, Heidi Helmer, Karen Smythe",
-    "director": "Terence H. Winkless"
+    "director": "Terence H. Winkless",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "84391",
@@ -1090,10 +2906,10 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 2291,
+    "view_total": 2296,
     "view_day": 1047,
-    "view_week": 2291,
-    "view_month": 2291,
+    "view_week": 2294,
+    "view_month": 2294,
     "rating_count": 24,
     "rating_star": "9.3",
     "created_at": "2026-09-10T14:00:11.000Z",
@@ -1140,7 +2956,10 @@
     ],
     "description": "trong bộ phim \"hẹn em ngày nhật thực\", khán giả sẽ được dẫn dắt vào một câu chuyện đầy cảm xúc về tình yêu, ký ức và lựa chọn. năm 1995, chính khi ân  [...]",
     "actor": "Lê Thiện Viễn, Lý Minh Thắng, Ngọc Bích, Khương Lê, Đoàn Thiên Ân, Thanh Sơn, Lê Khanh, Nguyên Thảo, Huỳnh Phương, Hứa Vĩ Văn, Kim Xuân, Hứa Minh Đạt, Lâm Vỹ Dạ, Năm Chà, Phi Phung",
-    "director": "Lê Thiện Viễn"
+    "director": "Lê Thiện Viễn",
+    "daily_views": {
+      "2026-09-11": 2
+    }
   },
   {
     "id": "84384",
@@ -1398,7 +3217,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 7158,
+    "view_total": 7159,
     "view_day": 307,
     "view_week": 7158,
     "view_month": 7158,
@@ -1671,7 +3490,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 131,
+    "view_total": 132,
     "view_day": 5,
     "view_week": 131,
     "view_month": 131,
@@ -1879,7 +3698,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 1732,
+    "view_total": 1734,
     "view_day": 16,
     "view_week": 1732,
     "view_month": 1732,
@@ -1953,7 +3772,10 @@
     ],
     "description": "\"chiến đội phiêu lưu boukenger: báu vật tối thượng\" là một bộ phim hành động phiêu lưu khoa học viễn tưởng thú vị không thể bỏ lỡ. được đạo diễn bởi s [...]",
     "actor": "Satoshi Morota, Takaaki Utsunomiya, Hiroshi Takahashi, Keiji Kameyama, Mitsuomi Takahashi, Saito Yasuka, Masashi Mikami, Chise Nakamura, Haruka Suenaga, Masayuki Deai, Shigeru Saiki, Nobuo Tanaka, Hiroo Ôtaka, Mami Yamasaki, Yasuaki Kurata, Nanase Hoshii",
-    "director": "Satoshi Morota"
+    "director": "Satoshi Morota",
+    "daily_views": {
+      "2026-09-11": 2
+    }
   },
   {
     "id": "84328",
@@ -2937,7 +4759,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 1597,
+    "view_total": 1598,
     "view_day": 8,
     "view_week": 418,
     "view_month": 1115,
@@ -3007,7 +4829,10 @@
     ],
     "description": "trên nền đen phủ kín những bí mật và âm mưu, bộ phim mobile suit gundam: tia chớp hathaway (còn được biết đến với tên gốc mobile suit gundam: hathaway [...]",
     "actor": "Shukou Murase, Keisuke Kasai, Naohiro Ogata, Kensho Ono, Reina Ueda, Junichi Suwabe, Soma Saito, Kenjiro Tsuda, Yui Ishikawa, Fukushi Ochiai, Shunsuke Takeuchi, Saori Hayami, Misato Matsuoka, Kohei Amasaki, Hikaru Tanaka",
-    "director": "Shukou Murase"
+    "director": "Shukou Murase",
+    "daily_views": {
+      "2026-09-13": 1
+    }
   },
   {
     "id": "84221",
@@ -3198,7 +5023,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 4969,
+    "view_total": 4971,
     "view_day": 21,
     "view_week": 1018,
     "view_month": 2586,
@@ -3287,7 +5112,10 @@
     ],
     "description": "trong cuộc phiêu lưu đầy kịch tính và hấp dẫn, bộ phim \"batman: sự sụp đổ của hiệp sĩ - phần 1\" đưa khán giả vào cuộc đối đầu cam go giữa batman và kẻ [...]",
     "actor": "Jeff Wamester, Jeremy Adams, Sam Register, Michael Uslan, Anson Mount, Michael Mando, Pablo Schreiber, Jeff Bennett, Luis Bermudez, Bruce Boxleitner, Jessica Camacho, Anthony Crivello, David Dastmalchian, Jason Flemyng, Jack Griffo, Jason Hightower",
-    "director": "Jeff Wamester"
+    "director": "Jeff Wamester",
+    "daily_views": {
+      "2026-09-11": 2
+    }
   },
   {
     "id": "84165",
@@ -3756,7 +5584,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 5783,
+    "view_total": 5784,
     "view_day": 5,
     "view_week": 503,
     "view_month": 1218,
@@ -3820,7 +5648,10 @@
     ],
     "description": "bộ phim \"đảo ấu trùng\" (tên gốc: the larva island movie) là tác phẩm đình đám của đạo diễn ahn byoung-wook. cuộc phiêu lưu hấp dẫn này kể về hành trìn [...]",
     "actor": "Ahn Byoung-wook, Jeong Mi-rin, Park Keun-hong, Koh Tae-wook, Hong Bum-ki, Kang Shin-hyung, Eddy Lee, Ahn Hyo-min, Kim Yeon-woo, Choi Nak-yoon",
-    "director": "Ahn Byoung-wook"
+    "director": "Ahn Byoung-wook",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "84101",
@@ -3841,7 +5672,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 4528,
+    "view_total": 4529,
     "view_day": 5,
     "view_week": 542,
     "view_month": 1245,
@@ -3915,7 +5746,10 @@
     ],
     "description": "trong bộ phim hoạt hình \"shin - cậu bé bút chì 16: siêu cơn bão hung hăng mời gọi! dũng sĩ kinpoko\", khán giả sẽ được chứng kiến hành trình phiêu lưu  [...]",
     "actor": "Mitsuru Hongo, Rika Tsurusaki, Akiko Yajima, Miki Narahashi, Keiji Fujiwara, Satomi Korogi, Mari Mashiba, Yui Horie, Mitsuru Miyamoto, Rei Sakuma, Takako Honda, Kurumi Mamiya, Tomoko Kaneda, Yusaku Yara",
-    "director": "Mitsuru Hongo"
+    "director": "Mitsuru Hongo",
+    "daily_views": {
+      "2026-09-11": 1
+    }
   },
   {
     "id": "84343",
@@ -4968,7 +6802,7 @@
     "is_recommended": false,
     "is_copyright": false,
     "is_sensitive_content": false,
-    "view_total": 378,
+    "view_total": 380,
     "view_day": 136,
     "view_week": 378,
     "view_month": 378,

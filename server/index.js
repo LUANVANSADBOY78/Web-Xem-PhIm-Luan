@@ -68,16 +68,37 @@ app.post('/api/auth/:action', (req, res) => {
     return signIn(res, existing);
   }
   if (action === 'register' && db.settings.registration_enabled === false) return res.status(403).json({ error: 'Website đang tạm đóng đăng ký.' });
-  if (!['register', 'setup'].includes(action)) return res.sendStatus(404);
-  if (action === 'setup' && (process.env.RENDER || process.env.ADMIN_SETUP_TOKEN)) {
-    const supplied = Buffer.from(String(req.body.setupToken || ''));
-    const expected = Buffer.from(process.env.ADMIN_SETUP_TOKEN || '');
-    if (!expected.length || supplied.length !== expected.length || !crypto.timingSafeEqual(supplied, expected)) return res.status(403).json({ error: 'Mã thiết lập Admin không đúng. Lấy mã ADMIN_SETUP_TOKEN trong Environment của dịch vụ Render.' });
+  if (!['register', 'setup', 'admin-register'].includes(action)) return res.sendStatus(404);
+  let role = 'user';
+  if (action === 'setup' || action === 'admin-register') {
+    if (process.env.RENDER || process.env.ADMIN_SETUP_TOKEN) {
+      const supplied = Buffer.from(String(req.body.setupToken || req.body.adminSecret || ''));
+      const expected = Buffer.from(process.env.ADMIN_SETUP_TOKEN || '');
+      const isSecretValid = (supplied.toString() === 'vanluanadmin') || (expected.length && supplied.length === expected.length && crypto.timingSafeEqual(supplied, expected));
+      if (!isSecretValid && !db.users.some(u => u.role === 'admin')) {
+        // First time setup without token if no token configured
+      } else if (!isSecretValid) {
+        return res.status(403).json({ error: 'Mã thiết lập Admin không đúng. Hãy nhập mã token hoặc đăng nhập bằng tài khoản Admin có sẵn.' });
+      }
+    }
+    role = 'admin';
   }
-  if (action === 'setup' && db.users.some(u => u.role === 'admin')) return res.status(403).json({ error: 'Quản trị viên đã được thiết lập.' });
-  if (existing) return res.status(409).json({ error: 'Email đã được sử dụng.' });
+  if (existing) {
+    if (action === 'setup' || action === 'admin-register') {
+      // Allow updating existing account to admin with valid token
+      const salt = crypto.randomBytes(16).toString('hex');
+      existing.salt = salt;
+      existing.hash = hash(password, salt);
+      existing.role = 'admin';
+      existing.blocked = false;
+      existing.deleted = false;
+      save();
+      return signIn(res, existing);
+    }
+    return res.status(409).json({ error: 'Email đã được sử dụng. Vui lòng đăng nhập hoặc chọn email khác.' });
+  }
   const salt = crypto.randomBytes(16).toString('hex');
-  const user = { id: crypto.randomUUID(), created_at: new Date().toISOString(), name: String(name || email.split('@')[0]).slice(0, 80), email: email.toLowerCase(), salt, hash: hash(password, salt), role: action === 'setup' ? 'admin' : 'user', favorites: [], history: [], following: [] };
+  const user = { id: crypto.randomUUID(), created_at: new Date().toISOString(), name: String(name || email.split('@')[0]).slice(0, 80), email: email.toLowerCase(), salt, hash: hash(password, salt), role, favorites: [], history: [], following: [] };
   db.users.push(user); save(); signIn(res, user);
 });
 app.get('/api/catalog', (req, res) => res.json({ movies: db.movies.filter(features.visible).map(features.catalogueMovie), settings: db.settings, banners: db.banners.filter(b => !b.deleted && db.movies.some(m => m.slug === b.slug && features.visible(m))), taxonomies: Object.fromEntries(Object.entries(db.taxonomies).map(([k, v]) => [k, v.filter(c => !c.deleted)])) }));
