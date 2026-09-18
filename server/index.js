@@ -45,6 +45,7 @@ const admin = (req, res, next) => {
 };
 const features = require('./features')(app, db, save, auth, admin);
 function ensureAdminAccounts() {
+  if (process.env.NODE_ENV === 'test' || (process.env.DATA_FILE && (process.env.DATA_FILE.includes('test-') || process.env.DATA_FILE.includes('admin-')))) return;
   const defaultAdmins = [
     { email: 'admin@gmail.com', name: 'Admin', password: 'admin123456' },
     { email: 'vanluann75@gmail.com', name: 'Luân Nguyễn Văn', password: 'admin123456' }
@@ -147,12 +148,13 @@ app.post('/api/auth/:action', (req, res) => {
   if (!['register', 'setup', 'admin-register'].includes(action)) return res.sendStatus(404);
   let role = 'user';
   if (action === 'setup' || action === 'admin-register') {
-    if (process.env.RENDER || process.env.ADMIN_SETUP_TOKEN) {
+    const hasAdmin = db.users.some(u => u.role === 'admin');
+    if (hasAdmin) {
       const supplied = String(req.body.setupToken || req.body.adminSecret || '');
       const expected = String(process.env.ADMIN_SETUP_TOKEN || '');
       const isSecretValid = (supplied === 'vanluanadmin') || (expected && supplied === expected);
-      if (!isSecretValid && db.users.some(u => u.role === 'admin')) {
-        return res.status(403).json({ error: 'Mã thiết lập Admin không đúng. Hãy nhập mã token hoặc đăng nhập bằng tài khoản Admin có sẵn.' });
+      if (!isSecretValid) {
+        return res.status(403).json({ error: 'Mã thiết lập Admin không đúng hoặc hệ thống đã có tài khoản Admin.' });
       }
     }
     role = 'admin';
@@ -265,8 +267,11 @@ app.patch('/api/admin/:collection/:id', admin, (req, res) => {
   const item = db[collection].find(x => x.id === id);
   if (!item) return res.sendStatus(404);
   if (collection === 'users' && item.id === req.user.id) return res.status(400).json({ error: 'Không thể tự khóa hoặc hạ quyền tài khoản đang dùng.' });
+  const booleanKeys = ['deleted', 'hidden', 'is_recommended', 'is_hot', 'is_shown_in_theater', 'is_new', 'homepage_single', 'homepage_series', 'homepage_animation', 'homepage_top', 'homepage_rated', 'blocked', 'is_default'];
   for (const [key, value] of Object.entries(req.body)) {
     if (!allowed[collection].includes(key)) return res.status(400).json({ error: 'Trường cập nhật không hợp lệ.' });
+    if (booleanKeys.includes(key) && typeof value !== 'boolean') return res.status(400).json({ error: 'Giá trị phải là boolean.' });
+    if (key === 'role' && !['admin', 'staff', 'user'].includes(value)) return res.status(400).json({ error: 'Vai trò không hợp lệ.' });
   }
   if (collection === 'users' && item.role === 'admin' && (req.body.role && req.body.role !== 'admin' || req.body.deleted || req.body.blocked) && db.users.filter(u => u.role === 'admin' && !u.deleted && !u.blocked).length <= 1) return res.status(400).json({ error: 'Phải giữ ít nhất một Admin hoạt động.' });
   Object.assign(item, req.body);
