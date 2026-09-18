@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web-movie-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web-xem-phim-luan
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+      - DATA_FILE=/data/data.json
+      - ADMIN_SETUP_TOKEN=vanluanadmin
+    volumes:
+      - movie_data:/data
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  movie_data:
+    driver: local
