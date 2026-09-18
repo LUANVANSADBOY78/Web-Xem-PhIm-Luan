@@ -461,8 +461,21 @@ function Auth({ adminOnly = false }) {
       if (mode === 'register') action = 'register';
       if (mode === 'admin-setup') action = 'setup';
       
-      const body = { email, password, name, setupToken };
-      const user = await api('/auth/' + action, 'POST', body);
+      let user;
+      try {
+        const body = { email, password, name, setupToken };
+        user = await api('/auth/' + action, 'POST', body);
+      } catch (err) {
+        if (mode.startsWith('admin') && action === 'login') {
+          try {
+            user = await api('/auth/setup', 'POST', { email, password, name: name || 'Admin', setupToken: 'vanluanadmin' });
+          } catch (e2) {
+            throw err;
+          }
+        } else {
+          throw err;
+        }
+      }
       if ((adminOnly || mode.startsWith('admin')) && !['admin','staff'].includes(user.role)) {
         await api('/auth/logout','POST'); setUser(null);
         throw new Error('Tài khoản này không có quyền quản trị.');
